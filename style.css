@@ -1,0 +1,63 @@
+/* e4630a - color */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.burger-menu {
+    width: 40px;
+    height: 40px;
+    background: #e4630a;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.burger-menu span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: #fff;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.burger-menu span::before,
+.burger-menu span::after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    width: 15px;
+    height: inherit;
+    background: inherit;
+}
+
+.burger-menu span::after {
+    top: 8px;
+    right: 0;
+}
+
+.burger-menu.active span::after {
+    opacity: 0;
+}
+
+.burger-menu.active span {
+    transform: rotate(45deg);
+}
+
+.burger-menu.active span::before {
+    transform: rotate(90deg);
+    top: 0;
+    width: inherit;
+}
